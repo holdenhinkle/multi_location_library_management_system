@@ -7,11 +7,11 @@ module Api
       def index
         books = Book.all
 
-        render json: BookSerializer.new(books, genres).serialized_json
+        render json: BookSerializer.new(books, options).serialized_json
       end
 
       def show
-        render json: BookSerializer.new(@book, genres).serialized_json
+        render json: BookSerializer.new(@book, options).serialized_json
       end
 
       def create
@@ -26,7 +26,7 @@ module Api
 
       def update
         if @book.update(book_params)
-          render json: BookSerializer.new(@book, genres).serialized_json
+          render json: BookSerializer.new(@book, options).serialized_json
         else
           render json: { error: @book.errors.messages }, status: 422
         end
@@ -54,8 +54,8 @@ module Api
         @book = Book.find_by(slug: params[:slug])
       end
 
-      def genres
-        @options ||= { include: %i[genres] }
+      def options
+        @options ||= { include: %i[authors genres] }
       end
     end
   end

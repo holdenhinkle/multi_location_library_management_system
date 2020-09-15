@@ -28,14 +28,24 @@
 #   })
 # end
 
-genres = Genre.create([
-  { name: 'Autobiography' },
-  { name: 'Science Fictuion' },
-  { name: 'Romance' },
-  { name: 'Fantasy'},
-  { name: 'Romance' },
-  { name: 'Adventure'},
-  { name: 'Contemporary' },
-  { name: 'Dystopian'},
-  { name: 'Mystery'}
+# genres = Genre.create([
+#   { name: 'Autobiography' },
+#   { name: 'Science Fictuion' },
+#   { name: 'Romance' },
+#   { name: 'Fantasy'},
+#   { name: 'Romance' },
+#   { name: 'Adventure'},
+#   { name: 'Contemporary' },
+#   { name: 'Dystopian'},
+#   { name: 'Mystery'}
+#   ])
+
+  authors = Author.create([
+    { first_name: 'Fred', last_name: 'Flinstone'},
+    { first_name: 'Holden', last_name: 'Hinkle' },
+    { first_name: 'Farhan', last_name: 'Hinkle' },
+    { first_name: 'Hadiya', last_name: 'Hinkle' },
+    { first_name: 'Fang', last_name: 'Cat' },
+    { first_name: 'Gidget', last_name: 'Cat' },
+    { first_name: 'Pikachu', last_name: 'Cat' }
   ])

@@ -8,6 +8,7 @@ Rails.application.routes.draw do
       resources :libraries, param: :slug
       resources :books, param: :slug
       resources :genres, param: :slug
+      resources :authors, param: :slug
     end
   end
 end
